@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Icon from "../components/Icon.astro";
+
+const categorias = [
+  { icono: "graduacion", titulo: "Educación", texto: "Aseguramos el futuro académico de tus hijos, pase lo que pase." },
+  { icono: "mujer", titulo: "Mujer", texto: "Coberturas y planeación financiera pensadas para ti." },
+  { icono: "retiro", titulo: "Retiro", texto: "Construye un fondo que te permita retirarte con tranquilidad." },
+  { icono: "proteccion", titulo: "Protección", texto: "Blinda a tu familia ante imprevistos con coberturas de vida." },
+  { icono: "ahorro", titulo: "Ahorro", texto: "Instrumentos para hacer crecer tu patrimonio a tu ritmo." },
+  { icono: "salud", titulo: "Salud", texto: "Gastos médicos mayores y menores para ti y tu familia." },
+];
+---
+<Layout titulo="Personas" activo="personas">
+  <div class="franja-foto franja-personas">
+    <div class="franja-contenido">
+      <h1>Personas</h1>
+      <p>Te ayudamos a planear tu futuro y cumplir tus metas y objetivos financieros, al mismo tiempo que protegemos tu patrimonio.</p>
+    </div>
+  </div>
+
+  <section class="seccion">
+    <div class="contenedor">
+      <div class="rejilla">
+        {categorias.map((c) => (
+          <div class="tarjeta">
+            <div class="icono"><Icon nombre={c.icono} /></div>
+            <h3>{c.titulo}</h3>
+            <p>{c.texto}</p>
+          </div>
+        ))}
+      </div>
+      <div style="text-align:center; margin-top:44px">
+        <a href="/contacto" class="boton boton-oscuro">Obtener asesoría personalizada</a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,29 @@
+---
+const { activo = "" } = Astro.props;
+const enlaces = [
+  { href: "/", texto: "Inicio", id: "inicio" },
+  { href: "/nosotros", texto: "Nosotros", id: "nosotros" },
+  { href: "/personas", texto: "Personas", id: "personas" },
+  { href: "/empresas", texto: "Empresas", id: "empresas" },
+  { href: "/fianzas", texto: "Fianzas", id: "fianzas" },
+  { href: "/contacto", texto: "Contacto", id: "contacto" },
+];
+---
+<header class="encabezado">
+  <div class="barra-nav">
+    <a href="/" class="marca">
+      <img src="/logo.png" alt="Caballero Alva Consultores" class="marca-logo" />
+      <span>
+        Caballero Alva
+        <span class="desde">Consultores · Desde 1942</span>
+      </span>
+    </a>
+    <nav>
+      <ul class="menu">
+        {enlaces.map((e) => (
+          <li><a href={e.href} class={activo === e.id ? "activo" : ""}>{e.texto}</a></li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>

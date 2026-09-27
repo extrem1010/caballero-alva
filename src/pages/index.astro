@@ -1,17 +1,88 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
+import Icon from "../components/Icon.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout titulo="Inicio" activo="inicio">
+  <section class="hero-foto">
+    <span class="insignia">Desde 1942 · Más de 70 años de experiencia</span>
+    <h1>Protegemos tu patrimonio y el de tu empresa</h1>
+    <p>
+      Asesoría en seguros y fianzas con estrategias personalizadas para personas
+      y empresas, respaldadas por décadas de confianza en el mercado mexicano.
+    </p>
+    <div class="botones">
+      <a href="/personas" class="boton boton-primario">Soy persona</a>
+      <a href="/empresas" class="boton boton-secundario">Soy empresa</a>
+    </div>
+  </section>
+
+  <section class="seccion">
+    <div class="contenedor">
+      <div class="seccion-titulo">
+        <h2>Nuestras áreas de asesoría</h2>
+        <p>Soluciones a la medida según lo que necesites proteger.</p>
+      </div>
+      <div class="rejilla">
+        <a href="/personas" class="tarjeta">
+          <div class="icono"><Icon nombre="personas" /></div>
+          <h3>Personas</h3>
+          <p>Educación, retiro, salud, ahorro y protección familiar.</p>
+        </a>
+        <a href="/empresas" class="tarjeta">
+          <div class="icono"><Icon nombre="empresa" /></div>
+          <h3>Empresas</h3>
+          <p>Autos, responsabilidad civil, transporte, marítimo e incendio.</p>
+        </a>
+        <a href="/fianzas" class="tarjeta">
+          <div class="icono"><Icon nombre="fianza" /></div>
+          <h3>Fianzas</h3>
+          <p>Administrativas, de fidelidad, crédito y fiscales.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" style="background:var(--gris-claro)">
+    <div class="contenedor">
+      <div class="stats">
+        <div>
+          <div class="num">70+</div><div class="label">Años de experiencia</div>
+        </div>
+        <div>
+          <div class="num">100%</div><div class="label">
+            Asesoría personalizada
+          </div>
+        </div>
+        <div>
+          <div class="num">MDRT</div><div class="label">
+            Asesores certificados
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion">
+    <div class="contenedor" style="text-align:center">
+      <h2 style="color:var(--azul-oscuro)">
+        ¿Listo para proteger lo que más te importa?
+      </h2>
+      <p style="color:var(--gris); max-width:520px; margin:12px auto 28px">
+        Contáctanos y recibe asesoría personalizada sin costo.
+      </p>
+      <a href="/contacto" class="boton boton-oscuro"
+        >Obtener asesoría personalizada</a
+      >
+    </div>
+  </section>
+
+  <a
+    href="https://wa.me/525512345678"
+    class="wa-flotante"
+    target="_blank"
+    rel="noopener"
+    aria-label="WhatsApp"
+    style="display:none">💬</a
+  >
+</Layout>

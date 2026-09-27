@@ -1,0 +1,80 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+<Layout titulo="Contacto" activo="contacto">
+  <div class="franja-foto franja-fianzas">
+    <div class="franja-contenido">
+      <h1>Contacto</h1>
+      <p>Escríbenos y con gusto un asesor te contactará a la brevedad.</p>
+    </div>
+  </div>
+
+  <section class="seccion">
+    <div class="contenedor">
+      <div class="contacto-grid">
+        <div class="info-contacto">
+          <div class="item">
+            <div class="icono-chico">📍</div>
+            <div>
+              <h4>Dirección</h4>
+              <p>Paseo de la Reforma 342 - 2114, Col. Juárez, 06600, Ciudad de México, México</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="icono-chico">📞</div>
+            <div>
+              <h4>Teléfono</h4>
+              <p>LADA (55) 5254-2884 · 5545-8905</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="icono-chico">✉️</div>
+            <div>
+              <h4>Correo</h4>
+              <p><a href="mailto:contacto@caballeroalva.com">contacto@caballeroalva.com</a></p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="icono-chico">💼</div>
+            <div>
+              <h4>Únete a nuestro equipo</h4>
+              <p>Aplica en nuestra <a href="/trabaja-con-nosotros">bolsa de trabajo</a> o envía tu CV a <a href="mailto:reclutamiento1@caballeroalva.com">reclutamiento1@caballeroalva.com</a></p>
+            </div>
+          </div>
+
+          <div class="mapa">
+            <iframe
+              src="https://www.google.com/maps?q=Paseo+de+la+Reforma+342,+Col.+Ju%C3%A1rez,+06600+Ciudad+de+M%C3%A9xico&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Ubicación Caballero Alva Consultores"
+            ></iframe>
+          </div>
+        </div>
+
+        <form class="formulario" action="https://formspree.io/f/mvkgvwdl" method="POST">
+          <div class="campo">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+          <div class="campo">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="campo">
+            <label for="asunto">Asunto</label>
+            <input type="text" id="asunto" name="asunto" />
+          </div>
+          <div class="campo">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="boton boton-oscuro" style="border:none; cursor:pointer; width:100%">Enviar</button>
+          <p style="font-size:0.78rem; color:var(--gris); margin-top:14px">
+            En Caballero Alva Consultores SC cumplimos con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+</Layout>
